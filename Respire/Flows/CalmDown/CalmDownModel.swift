@@ -10,13 +10,19 @@ import Foundation
 
 final class CalmDownModel {
     
+    // MARK: - Properties
+    
     var breathePhases: [BreathePhase] = []
     
+    // MARK: - Init
+    
     init() {
-        fetchBreathePhases()
+        setupBreathePhases()
     }
     
-    private func fetchBreathePhases() {
+    // MARK: - Private functions
+    
+    private func setupBreathePhases() {
         let fetchedPhases: [BreathePhase] = LocalDataSevice.named("Sample")
         
         breathePhases.append(BreathePhase.begin)
@@ -24,3 +30,4 @@ final class CalmDownModel {
         breathePhases.append(BreathePhase.end)
     }
 }
+

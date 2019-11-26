@@ -12,18 +12,19 @@ struct BreathePhase: Decodable {
     
     enum PhaseType: String, Decodable {
         
-        case begin, end
         case inhale, exhale, hold
+        case begin, end
     }
     
     let type: PhaseType
     let duration: Int
-    let color: String
+    let color: String?
 }
 
+/// I think it’s better to use the `begin` and `end` actions like an object,
+/// since if it is necessary to make changes it will be easy to change and we do not need to write the UI for this cases
 extension BreathePhase {
     
-    static let begin = BreathePhase(type: .begin, duration: 2, color: "#FEFD00")
-    static let end = BreathePhase(type: .end, duration: 2, color: "#FEFD00")
-    
+    static let begin = BreathePhase(type: .begin, duration: 2, color: "#00FEFF")
+    static let end = BreathePhase(type: .end, duration: 2, color: nil)
 }

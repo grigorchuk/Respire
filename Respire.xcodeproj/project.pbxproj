@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55D691EC238C660700B97E29 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D691EB238C660700B97E29 /* BaseViewController.swift */; };
+		555670C2238DC8C7008A6667 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670C1238DC8C7008A6667 /* CountDownTimer.swift */; };
+		555670C4238DCB33008A6667 /* Int + Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670C3238DCB33008A6667 /* Int + Double.swift */; };
+		555670C6238DCFF4008A6667 /* UIScreen + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670C5238DCFF4008A6667 /* UIScreen + Extension.swift */; };
+		555670C8238DD5C1008A6667 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670C7238DD5C1008A6667 /* Localization.swift */; };
+		555670CA238DD87A008A6667 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670C9238DD87A008A6667 /* Colors.swift */; };
+		555670CC238DECE8008A6667 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555670CB238DECE8008A6667 /* BaseViewController.swift */; };
 		55DAC7C6238C75CC002E0C9A /* Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC7C5238C75CC002E0C9A /* Sample.json */; };
 		55DAC7CA238C75DB002E0C9A /* CalmDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7C8238C75DB002E0C9A /* CalmDownModel.swift */; };
 		55DAC7CB238C75DB002E0C9A /* CalmDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7C9238C75DB002E0C9A /* CalmDownViewController.swift */; };
 		55DAC7CD238C75E7002E0C9A /* LocalDataSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7CC238C75E7002E0C9A /* LocalDataSevice.swift */; };
 		55DAC7D0238C75FD002E0C9A /* BreathePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7CF238C75FD002E0C9A /* BreathePhase.swift */; };
-		55DAC7D3238C7776002E0C9A /* String+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7D2238C7776002E0C9A /* String+Color.swift */; };
+		55DAC7D3238C7776002E0C9A /* String + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7D2238C7776002E0C9A /* String + Color.swift */; };
 		55DAC7D6238C7BF0002E0C9A /* CalmDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC7D5238C7BF0002E0C9A /* CalmDownView.swift */; };
 		55E088BF238C63240013881B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E088BE238C63240013881B /* AppDelegate.swift */; };
 		55E088C8238C63240013881B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E088C7238C63240013881B /* Assets.xcassets */; };
@@ -21,13 +26,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55D691EB238C660700B97E29 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		555670C1238DC8C7008A6667 /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
+		555670C3238DCB33008A6667 /* Int + Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Double.swift"; sourceTree = "<group>"; };
+		555670C5238DCFF4008A6667 /* UIScreen + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen + Extension.swift"; sourceTree = "<group>"; };
+		555670C7238DD5C1008A6667 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		555670C9238DD87A008A6667 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		555670CB238DECE8008A6667 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		55DAC7C5238C75CC002E0C9A /* Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sample.json; sourceTree = "<group>"; };
 		55DAC7C8238C75DB002E0C9A /* CalmDownModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalmDownModel.swift; sourceTree = "<group>"; };
 		55DAC7C9238C75DB002E0C9A /* CalmDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalmDownViewController.swift; sourceTree = "<group>"; };
 		55DAC7CC238C75E7002E0C9A /* LocalDataSevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataSevice.swift; sourceTree = "<group>"; };
 		55DAC7CF238C75FD002E0C9A /* BreathePhase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathePhase.swift; sourceTree = "<group>"; };
-		55DAC7D2238C7776002E0C9A /* String+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Color.swift"; sourceTree = "<group>"; };
+		55DAC7D2238C7776002E0C9A /* String + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Color.swift"; sourceTree = "<group>"; };
 		55DAC7D5238C7BF0002E0C9A /* CalmDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmDownView.swift; sourceTree = "<group>"; };
 		55E088BB238C63240013881B /* Respire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Respire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E088BE238C63240013881B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +68,8 @@
 		55D691EE238C669E00B97E29 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				55D691EB238C660700B97E29 /* BaseViewController.swift */,
+				555670CB238DECE8008A6667 /* BaseViewController.swift */,
+				555670C1238DC8C7008A6667 /* CountDownTimer.swift */,
 				55DAC7D1238C776A002E0C9A /* Extensions */,
 			);
 			path = Common;
@@ -76,8 +87,10 @@
 		55D691F0238C66DC00B97E29 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				55E088CC238C63240013881B /* Info.plist */,
+				555670C9238DD87A008A6667 /* Colors.swift */,
+				555670C7238DD5C1008A6667 /* Localization.swift */,
 				55DAC7C5238C75CC002E0C9A /* Sample.json */,
+				55E088CC238C63240013881B /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -112,7 +125,9 @@
 		55DAC7D1238C776A002E0C9A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				55DAC7D2238C7776002E0C9A /* String+Color.swift */,
+				555670C3238DCB33008A6667 /* Int + Double.swift */,
+				55DAC7D2238C7776002E0C9A /* String + Color.swift */,
+				555670C5238DCFF4008A6667 /* UIScreen + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,12 +240,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D691EC238C660700B97E29 /* BaseViewController.swift in Sources */,
+				555670CC238DECE8008A6667 /* BaseViewController.swift in Sources */,
 				55DAC7D0238C75FD002E0C9A /* BreathePhase.swift in Sources */,
+				555670C8238DD5C1008A6667 /* Localization.swift in Sources */,
+				555670C6238DCFF4008A6667 /* UIScreen + Extension.swift in Sources */,
+				555670CA238DD87A008A6667 /* Colors.swift in Sources */,
 				55E088BF238C63240013881B /* AppDelegate.swift in Sources */,
 				55DAC7CA238C75DB002E0C9A /* CalmDownModel.swift in Sources */,
-				55DAC7D3238C7776002E0C9A /* String+Color.swift in Sources */,
+				55DAC7D3238C7776002E0C9A /* String + Color.swift in Sources */,
+				555670C2238DC8C7008A6667 /* CountDownTimer.swift in Sources */,
 				55DAC7D6238C7BF0002E0C9A /* CalmDownView.swift in Sources */,
+				555670C4238DCB33008A6667 /* Int + Double.swift in Sources */,
 				55DAC7CD238C75E7002E0C9A /* LocalDataSevice.swift in Sources */,
 				55DAC7CB238C75DB002E0C9A /* CalmDownViewController.swift in Sources */,
 			);

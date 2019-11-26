@@ -10,7 +10,7 @@ import UIKit
 
 extension String {
     
-    func toColor() -> UIColor {
+    func uiColor() -> UIColor {
         var uppercasedString = self.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if uppercasedString.hasPrefix("#") {

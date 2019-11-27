@@ -12,10 +12,14 @@ final class CalmDownView: UIView {
     
     // MARK: - Properties
     
+    var remainingTimerCallback: ((Int, Int) -> Void)?
+    var remainingDidEndCallback: (() -> Void)?
+    
+    private let rectangleLayer = CALayer()
     private let phaseNameLabel = UILabel()
     private let phaseTimerLabel = UILabel()
-    private let rectangleLayer = CALayer()
-    private let сountDownTimer = CountDownTimer()
+    private let actionCountDownTimer = CountDownTimer()
+    private let remainingCountDownTimer = CountDownTimer()
     
     private var breathePhases: [BreathePhase] = []
     private var listOfActions: [(breathePhase: BreathePhase, animation: CABasicAnimation)] = []
@@ -75,10 +79,16 @@ final class CalmDownView: UIView {
     }
     
     private func setupCallbacks() {
-        сountDownTimer.updateCallback = { [weak self] _, minute, second in
+        remainingCountDownTimer.updateCallback = { [weak self] _, minute, second in
+            self?.remainingTimerCallback?(minute, second)
+        }
+        remainingCountDownTimer.didEndCallback = { [weak self] in
+            self?.remainingDidEndCallback?()
+        }
+        actionCountDownTimer.updateCallback = { [weak self] _, minute, second in
             self?.phaseTimerLabel.text = String(format: "%02d:%02d", minute, second)
         }
-        сountDownTimer.didEndCallback = { [weak self] in
+        actionCountDownTimer.didEndCallback = { [weak self] in
             self?.phaseTimerLabel.text = nil
         }
     }
@@ -91,13 +101,14 @@ final class CalmDownView: UIView {
         
     private func applyNextAnimation() {
         guard !listOfActions.isEmpty else { return }
+        handleremainingTimer()
         
         let action = listOfActions.removeFirst()
         
         phaseNameLabel.text = action.breathePhase.type.title
         phaseTimerLabel.isHidden = !action.breathePhase.type.needDisplay
         rectangleLayer.backgroundColor = action.breathePhase.color?.uiColor().cgColor ?? rectangleLayer.backgroundColor
-        сountDownTimer.start(with: Int(action.animation.duration))
+        actionCountDownTimer.start(with: Int(action.animation.duration))
         
         add(animation: action.animation, isNeedEndCallback: listOfActions.isEmpty)
     }
@@ -135,6 +146,18 @@ final class CalmDownView: UIView {
         return animation
     }
     
+    private func handleremainingTimer() {
+        if (listOfActions.count + 1) == breathePhases.count {
+            let allAnimationsDuration = breathePhases.compactMap {
+                $0.type != .begin && $0.type != .end ? $0.duration : nil
+            }.reduce(0, { $0 + $1 })
+            
+            remainingCountDownTimer.start(with: allAnimationsDuration)
+        } else if listOfActions.count == 1 {
+            remainingCountDownTimer.stop()
+        }
+    }
+    
     // MARK: - UIResponder
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -150,7 +173,7 @@ final class CalmDownView: UIView {
 extension CalmDownView: CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        сountDownTimer.stop()
+        actionCountDownTimer.stop()
         
         guard flag else { return }
         applyNextAnimation()

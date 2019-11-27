@@ -14,5 +14,6 @@ final class Localization {
     struct CalmDown {
         
         static let tapHereTitle = "TAP HERE\nTO BREATHE"
+        static let remainingTitle = "Remaining"
     }
 }

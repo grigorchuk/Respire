@@ -1,5 +1,5 @@
 //
-//  UIScreen + Extension.swift
+//  UIScreen+Extension.swift
 //  Respire
 //
 //  Created by Alex on 11/26/19.

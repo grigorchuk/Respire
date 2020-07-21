@@ -1,5 +1,5 @@
 //
-//  Int + Extension.swift
+//  Int+Extension.swift
 //  Respire
 //
 //  Created by Alex on 11/26/19.
